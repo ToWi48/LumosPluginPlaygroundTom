@@ -8,6 +8,12 @@
 		<Copyright>Copyright © 2025</Copyright>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
+
+		<AssemblySearchPaths>
+			$(AssemblySearchPaths);
+			C:\Program Files (x86)\DMXControl3\Kernel;
+			C:\Program Files (x86)\DMXControl3\GUI
+		</AssemblySearchPaths>
 	</PropertyGroup>
 	<ItemGroup>
 		<Reference Include="LumosControlsWPF">

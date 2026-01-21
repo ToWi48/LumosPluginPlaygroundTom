@@ -3,7 +3,11 @@ using org.dmxc.lumos.Kernel.Input.v2;
 using org.dmxc.lumos.Kernel.MainSwitch;
 using org.dmxc.lumos.Kernel.Plugin;
 using org.dmxc.lumos.Kernel.Resource;
+using LumosPluginTomExtentions.Handler;
+using org.dmxc.lumos.Kernel.HAL.Handler;
+using org.dmxc.lumos.Kernel.HAL;
 using System;
+using org.dmxc.lumos.Kernel.DeviceProperties;
 
 namespace LumosPluginTomExtentions
 {
@@ -20,6 +24,7 @@ namespace LumosPluginTomExtentions
         {
             Log.Info("Initialize " + nameof(LumosPluginTomExtentions));
             // MainSwitchManager.getInstance().RegisterMainSwitch(MainSwitchTemplate.getInstance());
+            HandlerFactory.getInstance().registerHandlerNode<ConnectingPropertiesDMXHandlerNode>("tom");
         }
 
         protected override void startupPlugin()
@@ -48,6 +53,13 @@ namespace LumosPluginTomExtentions
         {
             base.loadProject(context);
             Log.Info("LoadProject " + nameof(LumosPluginTomExtentions));
+
+            IPropertyHandlerNode goboWheelInstance = HandlerFactory.getInstance().getHandlerInstance("gobowheel");
+
+            Log.Info(Convert.ToString(goboWheelInstance.getCurrentValue(GobowheelProperty.)));
+
+            // HandlerFactory.getInstance().getHandlerInstance("dimmer").
+            // ref int alias = ref original;
         }
 
         public override void saveProject(LumosIOContext context)

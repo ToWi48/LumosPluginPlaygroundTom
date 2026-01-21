@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LumosPluginTemplates", "Lum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LumosGUIPluginTemplates", "LumosGUIPluginTemplates\LumosGUIPluginTemplates.csproj", "{C47AC542-8015-4F79-B11A-8A68385765B0}"
 EndProject
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LumosPluginTomExtentions", "LumosPluginTomExtentions\LumosPluginTomExtentions.csproj", "{698D7249-FFF6-403F-A2E3-63496513398E}"
+EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
