@@ -16,6 +16,10 @@
 		</AssemblySearchPaths>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+		<PackageReference Include="Google.Protobuf" Version="3.28.2" />
+	</ItemGroup>
+	<ItemGroup>
 		<Reference Include="Lumos">
 			<HintPath>E:\DMXControl 3\Kernel\Lumos.dll</HintPath>
 			<Private>False</Private>

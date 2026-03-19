@@ -1,5 +1,5 @@
 // Lumos, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-// org.dmxc.lumos.Kernel.PropertyValue.Effect.RectangleEffect
+// org.dmxc.lumos.Kernel.PropertyValue.Effect.RectangleFadedEffect
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +11,9 @@ using org.dmxc.lumos.Kernel.PropertyValue.Attachable;
 using org.dmxc.lumos.Kernel.PropertyValue.Effect;
 using org.dmxc.lumos.Kernel.Scene.Fanning;
 
-public class RectangleEffect : AbstractFrequentFunctionEffect
+public class RectangleFadedEffect : AbstractFrequentFunctionEffect
 {
-	private static readonly ILumosLog log = LumosLogger.getInstance(typeof(RectangleEffect));
+	private static readonly ILumosLog log = LumosLogger.getInstance(typeof(RectangleFadedEffect));
 
 	[UpdateParameter(true, false)]
 	public object PulsePause { get; set; }
@@ -42,14 +42,14 @@ public class RectangleEffect : AbstractFrequentFunctionEffect
 
 	protected override ILumosLog Log => log;
 
-	private RectangleEffect(object amplitude, object frequency, object phase, object pulsePause, object fadeTime)
+	private RectangleFadedEffect(object amplitude, object frequency, object phase, object pulsePause, object fadeTime)
 		: base(amplitude, frequency, phase)
 	{
 		PulsePause = pulsePause;
 		FadeTime = fadeTime;
 	}
 
-	public RectangleEffect()
+	public RectangleFadedEffect()
 		: this(100.0, 0.1, 0.0, 1.0, 0.0)
 	{
 	}
@@ -192,6 +192,6 @@ public class RectangleEffect : AbstractFrequentFunctionEffect
 
 	protected override AbstractFrequentFunctionEffect cloneAbstractFrequentFunctionEffect()
 	{
-		return new RectangleEffect(base.Amplitude, base.Frequency, base.Phase, PulsePause, FadeTime);
+		return new RectangleFadedEffect(base.Amplitude, base.Frequency, base.Phase, PulsePause, FadeTime);
 	}
 }

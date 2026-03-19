@@ -54,9 +54,9 @@ namespace LumosPluginTomExtentions
             base.loadProject(context);
             Log.Info("LoadProject " + nameof(LumosPluginTomExtentions));
 
-            IPropertyHandlerNode goboWheelInstance = HandlerFactory.getInstance().getHandlerInstance("gobowheel");
+            // IPropertyHandlerNode goboWheelInstance = HandlerFactory.getInstance().getHandlerInstance("gobowheel");
 
-            Log.Info(Convert.ToString(goboWheelInstance.getCurrentValue(GobowheelProperty.)));
+            // Log.Info(Convert.ToString(goboWheelInstance.getCurrentValue(GobowheelProperty.)));
 
             // HandlerFactory.getInstance().getHandlerInstance("dimmer").
             // ref int alias = ref original;

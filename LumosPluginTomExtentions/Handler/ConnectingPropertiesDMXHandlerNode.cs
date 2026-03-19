@@ -18,7 +18,7 @@ internal sealed class ConnectingPropertiesDMXHandlerNode : AbstractDMXHandlerNod
 {
 	public byte DMXValue { get; private set; }
 
-	private static readonly ILumosLog log = LumosLogger.getInstance(typeof(RectangleEffect));
+	private static readonly ILumosLog log = LumosLogger.getInstance(typeof(RectangleFadedEffect));
 
 	private static ILumosLog Log => log;
 
