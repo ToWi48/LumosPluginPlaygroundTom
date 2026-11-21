@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<OutputType>Library</OutputType>
+		<LangVersion>latest</LangVersion>
+		<AssemblyTitle>LumosApcExecutorLink</AssemblyTitle>
+		<Product>LumosApcExecutorLink</Product>
+		<Copyright>Copyright © 2026</Copyright>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<DMXCGuiDir>C:\Program Files (x86)\DMXControl3\GUI</DMXCGuiDir>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="..\Shared\ExecutorCache.cs" Link="Shared\ExecutorCache.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="System.Xml" />
+		<Reference Include="PresentationCore" />
+		<Reference Include="WindowsBase" />
+		<Reference Include="LumosGUI">
+			<HintPath>$(DMXCGuiDir)\LumosGUI.exe</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="LumosLIB">
+			<HintPath>$(DMXCGuiDir)\LumosLIB.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="LumosProtobuf">
+			<HintPath>$(DMXCGuiDir)\LumosProtobuf.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="LumosToolsLIB">
+			<HintPath>$(DMXCGuiDir)\LumosToolsLIB.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="NAudio.Midi">
+			<HintPath>$(DMXCGuiDir)\NAudio.Midi.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+</Project>

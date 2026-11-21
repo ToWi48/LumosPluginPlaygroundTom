@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<OutputType>Library</OutputType>
+		<LangVersion>latest</LangVersion>
+		<AssemblyTitle>LumosFadeMasterGuiPlugin</AssemblyTitle>
+		<Product>LumosFadeMasterGuiPlugin</Product>
+		<Copyright>Copyright © 2026</Copyright>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<DMXCGuiDir>C:\Program Files (x86)\DMXControl3\GUI</DMXCGuiDir>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Lib.Harmony" Version="2.3.6" />
+		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="System.Windows.Forms" />
+		<Reference Include="LumosGUI">
+			<HintPath>$(DMXCGuiDir)\LumosGUI.exe</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="LumosLIB">
+			<HintPath>$(DMXCGuiDir)\LumosLIB.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="LumosProtobuf">
+			<HintPath>$(DMXCGuiDir)\LumosProtobuf.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="LumosToolsLIB">
+			<HintPath>$(DMXCGuiDir)\LumosToolsLIB.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+</Project>

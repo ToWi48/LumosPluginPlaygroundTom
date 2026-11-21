@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<OutputType>Library</OutputType>
+		<Nullable>disable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<AssemblyTitle>LumosFadeMasterPlugin</AssemblyTitle>
+		<Product>LumosFadeMasterPlugin</Product>
+		<Copyright>Copyright © 2026</Copyright>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<!-- 0Harmony.dll muss neben dem Plugin liegen -->
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<DMXCKernelDir>C:\Program Files (x86)\DMXControl3\Kernel</DMXCKernelDir>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Lib.Harmony" Version="2.3.6" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="Lumos">
+			<HintPath>$(DMXCKernelDir)\Lumos.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="LumosLIB">
+			<HintPath>$(DMXCKernelDir)\LumosLIB.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="LumosProtobuf">
+			<HintPath>$(DMXCKernelDir)\LumosProtobuf.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="LumosToolsLIB">
+			<HintPath>$(DMXCKernelDir)\LumosToolsLIB.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+</Project>

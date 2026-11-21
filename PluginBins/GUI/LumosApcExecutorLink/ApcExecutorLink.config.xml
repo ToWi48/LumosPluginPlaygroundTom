@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApcLinkConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Automatische Geraeteerkennung: alle MIDI-Ports, deren Name (ohne das Windows-Praefix "2 - ", "3 - " ...)
+       mit DeviceNamePattern beginnt. Die Zusatzports "MIDIIN2 (...)" / "MIDIOUT2 (...)" werden ignoriert.
+       Reihenfolge links -> rechts nach der Windows-Nummer (ohne Nummer = 1, dann 2, 3 ...). -->
+  <AutoDetect>true</AutoDetect>
+  <DeviceNamePattern>APC mini mk2</DeviceNamePattern>
+  <!-- Anzahl Geraete nebeneinander: 2 = Executor 1-8 links, 9-16 rechts -->
+  <MaxDevices>2</MaxDevices>
+  <!-- true, wenn die beiden Boards physisch vertauscht sind (Executor 1-8 landen sonst auf dem falschen Board) -->
+  <ReverseDeviceOrder>false</ReverseDeviceOrder>
+  <!-- Nur bei AutoDetect=false: feste Portnamen von links nach rechts
+  <Devices>
+    <ApcDevice>
+      <InputName>APC mini mk2</InputName>
+      <OutputName>APC mini mk2</OutputName>
+    </ApcDevice>
+  </Devices>
+  -->
+  <Columns>8</Columns>
+  <Rows>8</Rows>
+  <!-- true: Page 1 = unterste Pad-Reihe, false: Page 1 = oberste Reihe -->
+  <FirstPageAtBottom>false</FirstPageAtBottom>
+  <!-- true: Executor 1 = ganz rechts, false: Executor 1 = ganz links -->
+  <ExecutorsRightToLeft>false</ExecutorsRightToLeft>
+  <!-- z.B. 8 = Pages 9-16 anzeigen -->
+  <PageOffset>0</PageOffset>
+  <!-- LED-Werte in der Notation des MIDI-Rule-Editors (Channel / Message / Data2) -->
+  <Off>
+    <Channel>1</Channel>
+    <Message>144</Message>
+    <Data2>0</Data2>
+  </Off>
+  <!-- true: Idle-Farbe = Executor-Farbe (naechste Farbe der APC-Palette), Assigned/Data2 nur als Fallback -->
+  <UseExecutorColor>true</UseExecutorColor>
+  <!-- Grundeinstellung: Executor belegt, Cuelist gestoppt (DisabledBacktrack 150:0 D2:9).
+       Channel/Message = Helligkeit/Modus; Data2 wird bei UseExecutorColor durch die Executor-Farbe ersetzt -->
+  <Assigned>
+    <Channel>150</Channel>
+    <Message>0</Message>
+    <Data2>9</Data2>
+  </Assigned>
+  <!-- Aktiveinstellung: Cuelist laeuft (EnabledBacktrack 158:0 D2:3) -->
+  <Active>
+    <Channel>158</Channel>
+    <Message>0</Message>
+    <Data2>3</Data2>
+  </Active>
+  <RefreshMs>100</RefreshMs>
+  <FullResendMs>5000</FullResendMs>
+</ApcLinkConfig>
